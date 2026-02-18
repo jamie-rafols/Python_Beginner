@@ -11,6 +11,7 @@ class Point:
 
     def __add__(self, p):
         return Point((self.x + p.x), (self.y + p.y))
+    
 
 p1 = Point(3, 2)
 p2 = Point(6, 3)
