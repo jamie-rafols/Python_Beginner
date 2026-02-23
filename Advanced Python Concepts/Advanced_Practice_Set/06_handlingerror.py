@@ -1,10 +1,21 @@
+class NegativeNumberError(Exception):
+    pass
 
 try:
     
-    num1 = int(input("Enter number: "))
-    x = 10/0
+    num = int(input("Enter a number: "))
+    
+    if num <0:
+        raise NegativeNumberError("Number cannot be negative")
+    
+    result = 45/num
+    print(f"The result is {result}")
+    
 except ValueError:
-    print("Invalid")
-        
+    print("Error: Please enter a proper number")
+    
 except ZeroDivisionError:
-    print("Cannot divide 0")
+    print("Error: Cannot divide by 0")
+    
+except NegativeNumberError as e:
+    print(f"Error: {e}")
